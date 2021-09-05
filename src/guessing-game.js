@@ -10,23 +10,16 @@ class GuessingGame {
     }
 
     guess() {
-        let x = (this.min + this.max) / 2;
-        this.lastGuess = Math.round(x)
+        this.lastGuess = Math.round((this.min + this.max) / 2)
         return this.lastGuess
     }
 
     lower() {
-        if (this.max <= this.min + 1) {
-            return
-        }
-        this.max = this.lastGuess - 1
+        this.max = this.lastGuess
     }
 
     greater() {
-        if (this.max <= this.min + 1) {
-            return
-        }
-        this.min = this.lastGuess + 1
+        this.min = this.lastGuess
     }
 }
 
